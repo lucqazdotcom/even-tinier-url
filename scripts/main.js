@@ -42,18 +42,14 @@ async function request(){
     try {
         let response = await fetch(url)
         if(!response.ok){
-            throw new error("errorrrrrr")
+            throw new Error("errorrrrrr")
         }
 
         let result = await response.json()
-
-        if(result){
-            let data = JSON.parse(result)
-            console.log(data.message)
-        }
+        console.log(result[0])
     }
     catch (error) {
-        console.error("error")
+        console.error(error)
     }
 
 }
