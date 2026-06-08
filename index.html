@@ -1,38 +1,134 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ITS TINY</title>
+    <title>Even Tinier URL</title>
     <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-        <main id="main">
-            <section class="headerSection">
-                <h1 class="headerSection_header">Super tiny url</h1>
-            </section>
-            <section class="formSection">
-                <form class="formSection_form">
-                    <label id="formLabel" for="">Long Url</label>
-                    <input id="formInput" name="formInput" type="text">
-                    <button type="submit">Press this</button>
-                </form>
-            </section>
-            <section class="linkSection">
-                <div class="linkSection_container">
-                    <p class="linkSection_container-title"></p>
-                    <div class="linkSection_container-linkBox">
-                        <a href="" class="linkSection_container-anchor">
-                            <span
-                                class="linkSection_container-generatedLink"></span>
-                        </a>
-                    </div>
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="nav_logo">
+            <span class="nav_logo-mark">◆</span>
+            <span class="nav_logo-name">Even Tinier URL</span>
+            <span class="nav_logo-badge">LS W25</span>
+        </div>
+        <div class="nav_links">
+            <a href="#">Docs</a>
+            <a href="#">Pricing</a>
+            <a href="#">Blog</a>
+            <a href="#" class="nav_links-cta">Sign in →</a>
+        </div>
+    </nav>
+
+    <main id="main">
+
+        <section class="heroSection">
+            <div class="heroSection_eyebrow">
+                <span class="heroSection_eyebrow-dot"></span>
+                Now in public beta
+            </div>
+            <h1 class="heroSection_headline">
+                URLs, but<br><em>tinier.</em>
+            </h1>
+            <p class="heroSection_subhead">
+                We obsessed over every character. The result is a URL so considered, so refined,
+                it feels almost wrong to click it. This is the link, perfected.
+            </p>
+        </section>
+
+        <section class="formSection">
+            <form class="formSection_form" id="shortenForm">
+                <div class="formSection_inputWrap">
+                    <label class="formSection_label" for="formInput">Long URL</label>
+                    <input class="formSection_input" id="formInput" name="formInput" type="url"
+                        placeholder="https://your-unnecessarily-long-url.com/goes/here" autocomplete="off" />
                 </div>
-            </section>
-            <section class="tinyRetriever">
-                <button class="tinyRetriever_button" type="button">Retrieve</button>
-            </section>
-        </main>
-        <script src="scripts/main.js"></script>
-    </body>
+                <button class="formSection_btn" type="submit">
+                    Make it tiny
+                    <span class="formSection_btn-arrow">→</span>
+                </button>
+            </form>
+        </section>
+
+        <section class="linkSection" id="linkSection" aria-live="polite">
+            <div class="linkSection_container">
+                <p class="linkSection_label">Your tinier URL</p>
+                <div class="linkSection_box">
+                    <a href="" class="linkSection_anchor" id="generatedLink">
+                        <span class="linkSection_generatedLink" id="generatedLinkText"></span>
+                    </a>
+                    <button class="linkSection_copyBtn" id="copyBtn" type="button">Copy</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="retrieveSection">
+            <p class="retrieveSection_label">Already have a code?</p>
+            <div class="retrieveSection_wrap">
+                <input class="formSection_input retrieveSection_input" id="retrieveInput" type="text"
+                    placeholder="e.g. abc123" />
+                <button class="tinyRetriever_button" type="button" id="retrieveBtn">
+                    Retrieve →
+                </button>
+            </div>
+        </section>
+
+        <section class="retrievedSection" id="retrievedSection" aria-live="polite">
+            <div class="linkSection_container">
+                <p class="linkSection_label">Original URL</p>
+                <div class="linkSection_box">
+                    <a href="" class="linkSection_anchor" id="retrievedLink">
+                        <span class="linkSection_generatedLink" id="retrievedLinkText"></span>
+                    </a>
+                    <button class="linkSection_copyBtn" id="retrievedCopyBtn" type="button">Copy</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="proofSection">
+            <div class="proofSection_stat">
+                <span class="proofSection_stat-num">4.2</span>
+                <span class="proofSection_stat-label">URLs shortened</span>
+            </div>
+            <div class="proofSection_divider"></div>
+            <div class="proofSection_stat">
+                <span class="proofSection_stat-num">99.999%</span>
+                <span class="proofSection_stat-label">Uptime</span>
+            </div>
+            <div class="proofSection_divider"></div>
+            <div class="proofSection_stat">
+                <span class="proofSection_stat-num">&lt;3ms</span>
+                <span class="proofSection_stat-label">Avg redirect</span>
+            </div>
+            <div class="proofSection_divider"></div>
+            <div class="proofSection_stat">
+                <span class="proofSection_stat-num">Free</span>
+                <span class="proofSection_stat-label">Always, forever</span>
+            </div>
+        </section>
+
+        <section class="manifestoSection">
+            <blockquote class="manifestoSection_quote">
+                "A URL is a promise. It says: follow me, and I will take you somewhere.
+                We believe that promise deserves to be expressed in as few characters as
+                physically possible. Not because brevity is a feature — but because it
+                is a form of respect."
+            </blockquote>
+            <cite class="manifestoSection_cite">— The Even Tinier URL Design Principles, Vol. I</cite>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <span class="footer_left">© 2026 Even Tinier URL, Inc.</span>
+        <span class="footer_right">Backed by my Grandmother. Built in Toronto.</span>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
 </html>
